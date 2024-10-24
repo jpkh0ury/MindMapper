@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html,
+body {
+    font-family: "Open Sans", sans-serif;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgb(161, 159, 159);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    
+}
+
+.logo-mindmapper {
+    width: 40px;
+    height: 40px;
+    background-color: #cce7f0;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.nome-mindmapper {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.pesquisar {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.barra-pesquisa {
+    padding: 10px 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+    background-color: #f0f0f0;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-btn a{
+    text-decoration: none;
+    color: #333;
+}
+
+.barra-pesquisa::placeholder {
+    color: #999;
+}
+
+main {
+    display: flex;
+    background-color: aqua;
+    width: 100%;
+}
+
+/*Menu*/
+.menu {
+    height: 100%;
+    width: 40%;
+
+    background-color: #DBE7F0;
+    color: #000;
+    padding: 15px;
+    border-right: 2px solid rgb(161, 159, 159);
+}
+
+.menu h2 {
+    margin: 0;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 15px 0;
+}
+
+.menu ul li a {
+    color: #ffff;
+    text-decoration: none;
+}
+
+.contrair-menu {
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    width: 250px;
+    background-color: #FFFFFF;
+    margin-top: 70%;
+}
+
+.input {
+    position: relative;
+}
+
+.input input {
+    position: absolute;
+    height: 10%;
+}
+
+.img-menu{
+    position: relative;
+    top: 161px;
+    left: 10px;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    margin: 10px 0 30px 0;
+}
+
+.logo-usuario {
+    width: 40px;
+    height: 40px;
+    background-color: #201E1E;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.lista-menu {
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    width: 250px;
+    background-color: #FFFFFF;
+}
+
+
+
+/*Matérias*/
+#materias {
+    margin-left: 300px;
+    /* Deixa espaço para o menu */
+    padding: 20px;
+    /* Preenchimento interno da seção de matérias */
+    
+    /* Cor de fundo da seção de matérias */
+    flex-grow: 1;
+    /* Permite que a seção de matérias cresça */
+    height: 100%;
+    /* Altura da seção */
+    overflow-y: auto;
+    /* Permite rolagem se o conteúdo for longo */
+}
+
+#materias-principais {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.botao-materias {
+    background-color: #DBE7F0;
+    width: 218px;
+    height: 193px;
+    border-radius: 20px;
+    margin: 15px 40px 10px 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.botao-materias:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.botao-materias h3 {
+    background-color: #A8CBE5;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    flex-shrink: 0;
+}
+
+.botao-materias img {
+    width: 70px;
+    height: 70px;
+    margin: auto 0;
+}
+
+/*Matérias secundárias*/
+#materias-secundarias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.materia-secundaria {
+    display: none;
+}
+
+.foto-usuario{
+    display: none;
+    background-color: #201E1E;;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+.menu-reponsivo{
+    display: none;
+}
+
+@media screen and (max-width: 780px) {
+    
+    .foto-usuario{
+        display: flex;
+    }
+
+    .menu-reponsivo{
+        display: flex;
+    }
+
+    .pesquisar {
+        display: none;
+    }
+
+    .login-btn {
+        display: none;
+    }
+
+}

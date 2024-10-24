@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindMapper</title>
+    <link rel="stylesheet" href="../styles/style-index.css">
+    <link rel="stylesheet" href="../styles/style-iframes.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <button id="menu-reponsivo" class="menu-reponsivo">
+            <img src="../img/icons/menu-hamburguer.png" alt="icon do menu">
+        </button>
+        <div class="logo">
+            <div class="logo-mindmapper"></div>
+            <!--Imagem do MindMapper-->
+            <h1 class="nome-mindmapper">MindMapper</h1>
+        </div>
+        <div class="pesquisar">
+            <input type="text" placeholder="Pesquisar" class="barra-pesquisa">
+        </div>
+
+        <button class="login-btn"><a href="login.html">Login</a></button>
+
+        <div class="foto-usuario"></div>
+        <!--Foto do usuario-->
+    </header>
+
+    <main class="container-main">
+        <nav id="menu" class="container-nav">
+            <div class="usuario">
+                <div class="logo-usuario"></div>
+                <h2 class="nome-usuario">Nome</h2>
+            </div>
+            <div class="container-btns-acao">
+                <ul class="btns-acao">
+                    <li class="container-btn">
+                        <button name="anotacao" id="anotacao" class="lista-menu" onclick="mostrarAnotacao()">
+                            <img src="../img/icons/anotacao-icon.png" alt="icon das materias">
+                            <div>Anotação</div>
+                        </button>
+                    </li>
+
+                    <li class="container-btn">
+                        <button name="agenda" id="agenda" class="lista-menu" onclick="mostrarAgenda()">
+                            <img src="../img/icons/calendario-icon.png" alt="icon calendario">
+                            <div>Agenda</div>
+                        </button>
+                    </li>
+
+                    <li class="container-btn">
+                        <button name="materias" id="materia" class="lista-menu" onclick="mostrarMaterias()">
+                            <img src="../img/icons/materias-icon.png" alt="icon das materias">
+                            <div>Matérias</div>
+                        </button>
+                    </li>
+
+                    <li class="container-btn">
+                        <button name="sair" id="sair" class="lista-menu">
+                            <img src="../img/icons/sair-icon.png" alt="icon para sair">
+                            <div>Sair</div>
+                        </button>
+                    </li>
+                </ul>
+
+                <!--<div class="container-contrair-menu">
+                    <button onclick="toggleMenu()">
+                        <img src="../img/icons/menu-hamburguer.png" class="img-menu" alt="icon do menu">
+                        <div>Contrair Menu</div>
+                    </button>
+                </div>-->
+
+            </div>
+        </nav>
+
+        <section id="materias">
+            <div id="materias-principais">
+                <button class="botao-materias" onclick="materiaEscolhida('portugues')">
+                    <h3>Português</h3>
+                    <img src="../img/icons-materias/portugues.png" alt="icon de um livro">
+                </button>
+                <button class="botao-materias" onclick="materiaEscolhida('matematica')">
+                    <h3>Matemática</h3>
+                    <img src="../img/icons-materias/matematica.png" alt="icon de operações matemáticas">
+                </button>
+                <button class="botao-materias" onclick="materiaEscolhida('quimica')">
+                    <h3>Química</h3>
+                    <img src="../img/icons-materias/quimica.png" alt="icon de um frasco químico">
+                </button>
+                <button class="botao-materias" onclick="materiaEscolhida('biologia')">
+                    <h3>Biologia</h3>
+                    <img src="../img/icons-materias/biologia.png" alt="icon de uma bacteria">
+                </button>
+                <button class="botao-materias" onclick="materiaEscolhida('geografia')">
+                    <h3>Geografia</h3>
+                    <img src="../img/icons-materias/geografia.png" alt="icon do planeta Terra">
+                </button>
+                <button class="botao-materias" onclick="materiaEscolhida('historia')">
+                    <h3>História</h3>
+                    <img src="../img/icons-materias/historia.png" alt="ion de um pergaminho e uma pena">
+                </button>
+            </div>
+            <div id="materias-secundarias">
+                <div id="materia-portugues" class="materia-secundaria">
+                    <button class="botao-materias" onclick="materiaSecundaria(1)">
+                        <h3>Morfologia</h3>
+                        <img src="../img/icons-materias/portugues.png" alt="icon de um livro">
+                    </button>
+                    <button class="botao-materias" onclick="materiaSecundaria(2)">
+                        <h3>Pontuação</h3>
+                        <img src="../img/icons-materias/portugues.png" alt="icon de um livro">
+                    </button>
+                </div>
+                <div id="materia-matematica" class="materia-secundaria">
+                    <button class="botao-materias" onclick="materiaSecundaria(3)">
+                        <h3>M. Básica</h3>
+                        <img src="../img/icons-materias/matematica.png" alt="icon de operações matemáticas">
+                    </button>
+                    <button class="botao-materias" onclick="materiaSecundaria(4)">
+                        <h3>Matriz</h3>
+                        <img src="../img/icons-materias/matematica.png" alt="icon de operações matemáticas">
+                    </button>
+                </div>
+                <div id="materia-quimica" class="materia-secundaria">
+                    <button class="botao-materias" onclick="materiaSecundaria(5)">
+                        <h3>Q. Básica</h3>
+                        <img src="../img/icons-materias/quimica.png" alt="icon de um frasco químico">
+                    </button>
+                    <button class="botao-materias" onclick="materiaSecundaria(6)">
+                        <h3>Q. Orgânica</h3>
+                        <img src="../img/icons-materias/quimica.png" alt="icon de um frasco químico">
+                    </button>
+                </div>
+                <div id="materia-biologia" class="materia-secundaria">
+                    <button class="botao-materias" onclick="materiaSecundaria(7)">
+                        <h3>B. Básica</h3>
+                        <img src="../img/icons-materias/biologia.png" alt="icon de uma bacteria">
+                    </button>
+                    <button class="botao-materias" onclick="materiaSecundaria(8)">
+                        <h3>Copo Humano</h3>
+                        <img src="../img/icons-materias/biologia.png" alt="icon de uma bacteria">
+                    </button>
+                </div>
+                <div id="materia-geografia" class="materia-secundaria">
+                    <button class="botao-materias" onclick="materiaSecundaria(9)">
+                        <h3>Geopolítica</h3>
+                        <img src="../img/icons-materias/geografia.png" alt="icon do planeta Terra">
+                    </button>
+                    <button class="botao-materias" onclick="materiaSecundaria(10)">
+                        <h3>Geologia</h3>
+                        <img src="../img/icons-materias/geografia.png" alt="icon do planeta Terra">
+                    </button>
+                </div>
+                <div id="materia-historia" class="materia-secundaria">
+                    <button class="botao-materias" onclick="materiaSecundaria(11)">
+                        <h3>1° Guerra</h3>
+                        <img src="../img/icons-materias/quimica.png" alt="icon de um frasco químico">
+                    </button>
+                    <button class="botao-materias" onclick="materiaSecundaria(12)">
+                        <h3>2° Guerra</h3>
+                        <img src="../img/icons-materias/historia.png" alt="ion de um pergaminho e uma pena">
+                    </button>
+                </div>
+            </div>
+            <div id="mostrar-mapa"></div>
+        </section>
+
+        <section id="agenda-usuario">
+            <h1>Agenda de Estudos</h1>
+
+            <h2>Adicionar Tarefa de Estudo</h2>
+            <input type="text" id="titulo-materia" placeholder=" Nome da atividade">
+            <input type="datetime-local" id="data-atividade" placeholder="Data e hora">
+            <textarea id="descricao" placeholder=" Descrição da atividade"></textarea>
+            <button id="adicionar-tarefa" onclick="adicionarAtividade()">Adicionar Tarefa</button>
+
+            <h2>Minhas Atividades</h2>
+            <div id="atividade-lista" class="atividade-lista"></div>
+        </section>
+
+        <section id="anotacoes">
+            <h1>Minhas Anotações</h1>
+            <textarea id="nota" placeholder=" Escreva suas notas aqui..."></textarea>
+            <button id="salvar">Salvar Nota</button>
+            <div id="anotacoes"></div>
+        </section>
+    </main>
+
+    <script src="../scripts/script-menu.js"></script>
+    <script src="../scripts/script-materias.js"></script>
+    <script src="../scripts/script-agenda.js"></script>
+    <script src="../scripts/script-anotacoes.js"></script>
+</body>
+</html>
